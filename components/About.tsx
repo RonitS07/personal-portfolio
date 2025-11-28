@@ -15,14 +15,13 @@ export default function About() {
         transition={{ duration: 0.7 }}
       >
         {/* Title */}
-        <h2 className="text-4xl font-bold text-cyan-400">
-          About Me 👨‍💻
-        </h2>
+        <h2 className="text-4xl font-bold text-cyan-400">About Me 👨‍💻</h2>
 
         {/* Short Intro */}
         <p className="text-gray-300 text-lg leading-relaxed">
-          I'm a developer passionate about building modern, meaningful, and interactive digital solutions  
-          — from AI-powered applications to custom hardware projects.
+          I'm a developer passionate about building modern, meaningful, and
+          interactive digital solutions — from AI-powered applications to custom
+          hardware projects.
         </p>
 
         {/* Highlight Card */}
@@ -33,14 +32,16 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <p className="text-gray-300 leading-relaxed">
-            I enjoy working across frontend development, AI integration, and embedded system design.
-            My workflow blends creativity, clean code, and smooth user experience — whether it's building 
-            elegant UI with React & Tailwind or tinkering with ESP32 Bluetooth systems.
+            I enjoy working across frontend development, AI integration, and
+            embedded system design. My workflow blends creativity, clean code,
+            and smooth user experience — whether it's building elegant UI with
+            React & Tailwind or tinkering with ESP32 Bluetooth systems.
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            Outside of coding, I love exploring new technologies, experimenting with machine learning models,
-            and improving products through iterative development and real-world testing.
+            Outside of coding, I love exploring new technologies, experimenting
+            with machine learning models, and improving products through
+            iterative development and real-world testing.
           </p>
         </motion.div>
 
@@ -70,6 +71,15 @@ export default function About() {
               {skill}
             </span>
           ))}
+        </motion.div>
+
+        {/* Resume Action Row */}
+        <motion.div
+          className="flex items-center gap-4 justify-center mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
         </motion.div>
       </motion.div>
     </section>

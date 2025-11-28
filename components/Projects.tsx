@@ -26,7 +26,7 @@ const projects = [
     title: "Portfolio Website",
     desc: "The website you're currently viewing — fully custom, animated, responsive and deployed with Next.js + TailwindCSS.",
     tech: ["Next.js", "Framer Motion", "TailwindCSS"],
-    link: " http://192.168.0.104:3000",
+    link: "https://github.com/RonitS07/personal-portfolio",
   },
 ];
 
