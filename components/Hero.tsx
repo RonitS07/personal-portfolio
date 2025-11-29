@@ -1,34 +1,87 @@
-export default function Hero() {
+"use client";
+
+import { motion } from "framer-motion";
+import { RiGithubFill, RiLinkedinBoxFill, RiMailLine } from "react-icons/ri";
+
+export default function Home() {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col justify-center items-center text-center px-6 relative"
+      className="min-h-screen px-6 flex flex-col items-center justify-center text-center"
     >
-      {/* Background glowing blobs */}
-      <div className="absolute top-10 left-10 h-40 w-40 bg-cyan-400/30 blur-[80px] rounded-full"></div>
-      <div className="absolute bottom-10 right-10 h-40 w-40 bg-purple-500/30 blur-[80px] rounded-full"></div>
+      {/* Greeting */}
+      <motion.h1
+        className="text-5xl md:text-7xl font-bold leading-tight"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Hi, I'm <span className="text-cyan-400">Ronit Shah</span>.
+      </motion.h1>
 
-      <h1 className="text-4xl md:text-6xl font-bold text-white">
-        Hi, I'm <span className="text-cyan-400">Ronit Shah</span>
-      </h1>
-      <p className="mt-4 max-w-xl text-gray-300 text-lg">
-        A passionate developer crafting beautiful, modern, animated digital experiences.
-      </p>
+      {/* Subheading */}
+      <motion.p
+        className="text-gray-300 text-lg md:text-xl max-w-2xl mt-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        I engineer intelligent software and hardware — building modern web apps,
+        AI-driven systems, and BLE-powered embedded solutions.
+      </motion.p>
 
-      <div className="mt-8 flex gap-4">
+      {/* CTA Buttons */}
+      <motion.div
+        className="flex gap-4 mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
         <a
           href="#projects"
-          className="bg-cyan-400 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+          className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-xl shadow-lg hover:scale-105 transition"
         >
-          View My Work
+          View My Work 🚀
         </a>
+
         <a
-          href="#contact"
-          className="border border-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+          href="/resume.pdf"
+          className="px-6 py-3 border border-white/20 rounded-xl hover:bg-white/10 transition"
         >
-          Contact Me
+          Resume
         </a>
-      </div>
+      </motion.div>
+
+      {/* Social Icons */}
+      <motion.div
+        className="flex gap-6 text-3xl text-gray-400 mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <a
+          href="https://github.com/YOUR_GITHUB_USERNAME"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+        >
+          <RiGithubFill />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/YOUR_LINKEDIN"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+        >
+          <RiLinkedinBoxFill />
+        </a>
+
+        <a
+          href="mailto:YOUR_EMAIL@gmail.com"
+          className="hover:text-cyan-400 transition"
+        >
+          <RiMailLine />
+        </a>
+      </motion.div>
     </section>
   );
 }
