@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+
 
 import BackgroundBlobs from "@/components/BackgroundBlogs";
 import Noise from "@/components/Noise";
@@ -41,7 +43,9 @@ export default function RootLayout({
         <BackgroundBlobs />
         <Noise />
         {children}
+        <Analytics />
         <Toaster position="top-center" reverseOrder={false} />
+
       </body>
     </html>
   );
