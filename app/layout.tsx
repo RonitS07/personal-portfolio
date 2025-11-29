@@ -19,19 +19,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ------- SEO -------
 export const metadata: Metadata = {
   metadataBase: new URL("https://ronitshah.vercel.app"),
   title: "Ronit Shah — AI & Software Engineer",
-  description:
-    "Engineering intelligent intelligent systems — BLE hardware, AI automation, and intelligent software.",
-  icons: { icon: "/favicon-neww.ico" },
-
+  description: "Engineering intelligent systems — BLE devices, AI models, web apps and embedded systems.",
   openGraph: {
+    type: "website",   // 🔥 Fix 1: og:type
     title: "Ronit Shah — AI & Software Engineer",
     description: "AI • Software • Embedded Systems ⚡",
-    images: "/og-image.png",
     url: "https://ronitshah.vercel.app",
+    siteName: "Ronit Shah",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  // 🔥 Fix 2: fb:app_id (fake ID allowed if no FB app — Meta just needs a value)
+  other: {
+    "fb:app_id": "1234567890",
+  },
+  icons: {
+    icon: "/favicon-neww.ico", // (if you renamed favicon earlier)
   },
 };
 
